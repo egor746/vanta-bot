@@ -10,7 +10,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
-    await message.reply("👋 Добро пожаловать в Vanta Movers!\nВведите код доступа:")
+    await message.reply("👋 Добро пожаловать в Vanta Movers!\n\nВведите код доступа:")
 
 @dp.message_handler(lambda message: message.text == ACCESS_CODE)
 async def correct_code(message: types.Message):
